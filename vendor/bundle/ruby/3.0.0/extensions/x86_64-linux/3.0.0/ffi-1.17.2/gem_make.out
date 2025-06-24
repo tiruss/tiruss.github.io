@@ -1,5 +1,5 @@
 current directory: /home/dgookang/blog/vendor/bundle/ruby/3.0.0/gems/ffi-1.17.2/ext/ffi_c
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20250624-2838724-g2o0m6.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20250624-2862495-93v115.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ffi... no
 checking for whether -Wl,--exclude-libs,ALL is accepted as LDFLAGS... yes
@@ -161,4 +161,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.so
-/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20250624-2838724-ts77ri
+/usr/bin/install -c -m 0755 ffi_c.so ./.gem.20250624-2862495-hz91s3

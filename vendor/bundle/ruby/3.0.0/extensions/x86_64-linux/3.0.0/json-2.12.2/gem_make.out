@@ -1,5 +1,5 @@
 current directory: /home/dgookang/blog/vendor/bundle/ruby/3.0.0/gems/json-2.12.2/ext/json/ext/parser
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20250624-2851548-nz9xy0.rb extconf.rb
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20250624-2862495-wnlztf.rb extconf.rb
 checking for rb_enc_interned_str() in ruby.h... yes
 checking for rb_hash_new_capa() in ruby.h... no
 checking for rb_hash_bulk_insert() in ruby.h... yes
@@ -17,4 +17,4 @@ linking shared-object json/ext/parser.so
 
 current directory: /home/dgookang/blog/vendor/bundle/ruby/3.0.0/gems/json-2.12.2/ext/json/ext/parser
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20250624-2851548-yz8h2i/json/ext
+/usr/bin/install -c -m 0755 parser.so ./.gem.20250624-2862495-20qfio/json/ext
