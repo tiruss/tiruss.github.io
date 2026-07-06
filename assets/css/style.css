@@ -180,6 +180,10 @@ em { color: var(--muted); font-style: italic; }
 }
 /* Square emblems (e.g. university crest) need more height to read at the same visual weight */
 .cv__logo--emblem { max-height: 72px; top: -4px; }
+/* Wide logotypes (e.g. lab wordmark): scale up height, give the item extra
+   right padding so the longer logo doesn't collide with the role text. */
+.cv__logo--wide { max-height: 60px; max-width: 240px; top: -14px; }
+.cv__item--wide-logo { padding-right: 250px; }
 .cv__item::before {
   content: "";
   position: absolute;
@@ -290,4 +294,6 @@ em { color: var(--muted); font-style: italic; }
   .cv__item { padding-right: 76px; }
   .cv__logo { max-width: 62px; max-height: 22px; }
   .cv__logo--emblem { max-height: 54px; }
+  .cv__logo--wide { max-height: 34px; max-width: 150px; top: -6px; }
+  .cv__item--wide-logo { padding-right: 160px; }
 }
