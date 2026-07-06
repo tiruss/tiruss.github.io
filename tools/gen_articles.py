@@ -63,13 +63,20 @@ def main():
     for md in sorted(ARTICLES.glob("*.md")):
         slug = md.stem
         meta, body = parse_front_matter(md.read_text(encoding="utf-8"))
-        posts.append({
+        post = {
             "slug": slug,
             "title": meta.get("title", slug),
             "date": meta.get("date", ""),
             "display": display_date(meta.get("date", "")),
             "excerpt": meta.get("excerpt") or first_paragraph(body),
-        })
+        }
+        posts.append(post)
+        # Per-post JSON carries the raw Markdown body. JSON has no YAML front
+        # matter, so GitHub Pages serves it verbatim even when Jekyll is on
+        # (a raw .md would get converted to .html and 404 on fetch).
+        per_post = dict(post, body=body)
+        (ARTICLES / f"{slug}.json").write_text(
+            json.dumps(per_post, ensure_ascii=False) + "\n", encoding="utf-8")
 
     # newest first; posts without a date sink to the bottom
     posts.sort(key=lambda p: p["date"] or "0000", reverse=True)
@@ -77,7 +84,7 @@ def main():
     out = ARTICLES / "index.json"
     out.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8")
-    print(f"Wrote {out.relative_to(ROOT)} ({len(posts)} post(s))")
+    print(f"Wrote {out.relative_to(ROOT)} and {len(posts)} per-post JSON file(s)")
 
 
 if __name__ == "__main__":

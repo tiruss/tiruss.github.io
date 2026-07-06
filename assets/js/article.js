@@ -1,4 +1,5 @@
-// Renders an article from articles/<slug>.md into the page.
+// Renders an article from articles/<slug>.json (built by tools/gen_articles.py).
+// JSON is served verbatim by GitHub Pages even with Jekyll on, unlike raw .md.
 // Usage: article.html?p=<slug>
 (function () {
   const titleEl = document.getElementById('article-title');
@@ -24,21 +25,6 @@
     return m ? MONTHS[+m[2] - 1] + ' ' + m[1] : (d || '');
   }
 
-  // Simple front-matter parser: ---\nkey: value\n...\n---
-  function parse(raw) {
-    const meta = {};
-    let body = raw;
-    const m = raw.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
-    if (m) {
-      m[1].split('\n').forEach(function (line) {
-        const i = line.indexOf(':');
-        if (i > -1) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim();
-      });
-      body = raw.slice(m[0].length);
-    }
-    return { meta: meta, body: body };
-  }
-
   // Protect LaTeX math from the Markdown parser (so a_i, *, etc. survive),
   // then restore it with \( \) / \[ \] delimiters for MathJax.
   function shieldMath(src) {
@@ -56,18 +42,17 @@
     return html.replace(/@@MATH(\d+)@@/g, function (_, n) { return store[+n] || ''; });
   }
 
-  fetch('articles/' + slug + '.md')
+  fetch('articles/' + slug + '.json')
     .then(function (r) {
       if (!r.ok) throw new Error();
-      return r.text();
+      return r.json();
     })
-    .then(function (raw) {
-      const parsed = parse(raw);
-      const title = parsed.meta.title || slug;
+    .then(function (post) {
+      const title = post.title || slug;
       document.title = title + ' — DongGoo Kang';
       titleEl.textContent = title;
-      dateEl.textContent = formatDate(parsed.meta.date);
-      const shielded = shieldMath(parsed.body);
+      dateEl.textContent = post.display || formatDate(post.date);
+      const shielded = shieldMath(post.body || '');
       bodyEl.innerHTML = restoreMath(marked.parse(shielded.text), shielded.store);
       if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
         MathJax.startup.promise.then(function () { MathJax.typesetPromise([bodyEl]); });

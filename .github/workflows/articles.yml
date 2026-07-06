@@ -25,12 +25,12 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain articles/index.json)" ]; then
+          git add articles/*.json
+          if [ -n "$(git status --porcelain articles/*.json)" ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add articles/index.json
             git commit -m "chore: rebuild article index [skip ci]"
             git push
           else
-            echo "index.json already up to date."
+            echo "Article JSON already up to date."
           fi
