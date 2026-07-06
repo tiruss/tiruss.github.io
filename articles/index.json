@@ -5,5 +5,12 @@
     "date": "2026-07-06",
     "display": "Jul 2026",
     "excerpt": "An example post showing how to write articles in Markdown — with code and LaTeX math."
+  },
+  {
+    "slug": "rendering",
+    "title": "Rendering",
+    "date": "2026-07-06",
+    "display": "Jul 2026",
+    "excerpt": "An example post showing how to write articles in Markdown — with code and LaTeX math."
   }
 ]
