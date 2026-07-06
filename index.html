@@ -1,7 +1,281 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DongGoo Kang</title>
+  <meta name="description" content="DongGoo Kang — Ph.D. in AI Imaging. Vision, Graphics, and Vision-Language Models @ Smilegate." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="page">
+
+    <!-- ===== Header: photo + intro ===== -->
+    <header class="intro">
+      <a class="intro__photo-link" href="#photo-zoom" aria-label="Enlarge photo">
+        <img class="intro__photo" src="assets/images/profile.jpg" alt="DongGoo Kang" />
+      </a>
+
+      <div class="intro__body">
+        <h1 class="intro__name">DongGoo Kang</h1>
+        <p class="intro__role">Vision Part Lead @ Smilegate</p>
+        <p class="intro__affil">Computer Vision &middot; Graphics AI &middot; Vision-Language Models</p>
+        <ul class="links">
+          <li><a href="mailto:dgookang@smilegate.com">Email</a></li>
+          <li><a href="assets/cv.pdf">CV</a></li>
+          <li><a href="https://scholar.google.com/citations?user=ZTnbwzIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://github.com/tiruss" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/donggoo-kang-3bb4a4149/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ===== Bio ===== -->
+    <section class="bio">
+      <p>
+        I am a Ph.D. with extensive experience in <em>Computer Vision</em>, <em>Graphics AI</em>,
+        and <em>Vision-Language Models</em>. My work focuses on bringing AI into the 3D world—bridging
+        perception and generation to create intelligent, immersive digital environments.
+      </p>
+      <p>
+        I currently lead the Vision Part at Smilegate, building large-scale 2D/3D generative vision
+        systems for games. I received my Ph.D. in AI Imaging from Chung-Ang University, advised by
+        Prof. Joonki Paik. Feel free to reach out by
+        <a href="mailto:dgookang@smilegate.com">email</a>.
+      </p>
+    </section>
+
+    <!-- ===== News ===== -->
+    <section class="block">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="news__date">Jan 2026</span> Became Vision Part Lead at Smilegate, leading large-scale 2D/3D vision serving for in-game AI.</li>
+        <li><span class="news__date">Feb 2025</span> Completed my Ph.D. in AI Imaging at Chung-Ang University.</li>
+        <li><span class="news__date">Sep 2024</span> <em>VLM-HOI</em> accepted at ECCV 2024.</li>
+        <li><span class="news__date">Aug 2024</span> Received the Best Internship Award at NC AI (NCSOFT).</li>
+      </ul>
+    </section>
+
+    <!-- ===== Articles ===== -->
+    <section class="block">
+      <h2>Articles</h2>
+      <!-- Auto-populated from articles/index.json. Just add articles/<slug>.md
+           and push — the list rebuilds itself (tools/gen_articles.py + CI). -->
+      <ul class="articles" id="articles-list">
+        <li class="articles__empty">Loading…</li>
+      </ul>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="block">
+      <h2>Experience</h2>
+      <div class="cv">
+        <div class="cv__item">
+          <img class="cv__logo" src="assets/images/smilegate.svg" alt="Smilegate" />
+          <div class="cv__meta">2026 &ndash; Present</div>
+          <div class="cv__body">
+            <p class="cv__role">Vision Part Lead &middot; <span class="cv__org">Smilegate</span></p>
+            <p class="cv__lead">Large-scale 2D/3D vision serving for in-game AI.</p>
+            <ul class="cv__list">
+              <li>Designed and scaled production serving systems for 2D/3D generation.</li>
+              <li>Managed H200 GPU clusters with TensorRT optimization, quantization, and low-latency inference pipelines.</li>
+              <li>Handled 7&nbsp;TB+ datasets and model deployment in closed-network environments.</li>
+              <li>Collaborated with Unreal Engine 5 teams on in-game 2D/3D asset integration.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cv__item">
+          <img class="cv__logo" src="assets/images/smilegate.svg" alt="Smilegate" />
+          <div class="cv__meta">2025 &ndash; 2026</div>
+          <div class="cv__body">
+            <p class="cv__role">Research Scientist &middot; <span class="cv__org">Smilegate</span></p>
+            <p class="cv__desc">AI Center — Creative AI Team. 3D asset generation.</p>
+          </div>
+        </div>
+        <div class="cv__item">
+          <img class="cv__logo" src="assets/images/ncsoft.svg" alt="NCSOFT" />
+          <div class="cv__meta">2024</div>
+          <div class="cv__body">
+            <p class="cv__role">Research Intern &middot; <span class="cv__org">NC AI (NCSOFT)</span></p>
+            <p class="cv__lead">Graphics AI Lab — AI Texturing Team. Advancing 3D texturing and UV mapping.</p>
+            <ul class="cv__list">
+              <li>Applied latent video generation models to overcome the limitations of traditional texturing.</li>
+              <li>Integrated ControlNet into a vid2vid framework for geometry-aware texturing.</li>
+              <li>Used positional encoding to improve accuracy and consistency in UV inpainting.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cv__item">
+          <img class="cv__logo cv__logo--emblem" src="assets/images/cau.svg" alt="Chung-Ang University" />
+          <div class="cv__meta">2018 &ndash; 2024</div>
+          <div class="cv__body">
+            <p class="cv__role">Researcher &middot; <span class="cv__org">Chung-Ang University</span></p>
+            <p class="cv__desc">Image Processing and Intelligent System (IPIS) Lab.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="block">
+      <h2>Education</h2>
+      <div class="cv">
+        <div class="cv__item">
+          <img class="cv__logo cv__logo--emblem" src="assets/images/cau.svg" alt="Chung-Ang University" />
+          <div class="cv__meta">2021 &ndash; 2025</div>
+          <div class="cv__body">
+            <p class="cv__role">Ph.D. in AI Imaging &middot; <span class="cv__org">Chung-Ang University</span></p>
+            <p class="cv__desc">
+              GPA 4.5&nbsp;/&nbsp;4.5. Advisor: Prof. Joonki Paik.<br />
+              <a href="https://www.ipis.cau.ac.kr/home/ipis-members" target="_blank" rel="noopener">Image Processing and Intelligent System (IPIS) Lab</a>.<br />
+              Thesis: <em>A Study on Zero-shot 3D Texture Synthesis Using Geometry-aware Diffusion and Temporal Video Models.</em>
+            </p>
+          </div>
+        </div>
+        <div class="cv__item">
+          <img class="cv__logo cv__logo--emblem" src="assets/images/cau.svg" alt="Chung-Ang University" />
+          <div class="cv__meta">2018 &ndash; 2020</div>
+          <div class="cv__body">
+            <p class="cv__role">M.S. in AI Imaging &middot; <span class="cv__org">Chung-Ang University</span></p>
+            <p class="cv__desc">
+              GPA 4.39&nbsp;/&nbsp;4.5. Advisor: Prof. Joonki Paik.<br />
+              <a href="https://www.ipis.cau.ac.kr/home/ipis-members" target="_blank" rel="noopener">Image Processing and Intelligent System (IPIS) Lab</a>.<br />
+              Thesis: <em>Salient Object Detection Using Bilateral Attention Network With Dice Coefficient Loss.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Honors & Awards ===== -->
+    <section class="block">
+      <h2>Honors &amp; Awards</h2>
+      <ul class="news">
+        <li><span class="news__date">2024</span> Best Internship Award, NC AI (NCSOFT).</li>
+        <li><span class="news__date">2022</span> Best Paper Award, IPIU 2022.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section class="block">
+      <h2>Publications</h2>
+      <p class="pubs__note">
+        175 citations, h-index 7 &middot;
+        <a href="https://scholar.google.com/citations?user=ZTnbwzIAAAAJ&hl=en" target="_blank" rel="noopener">full list on Google Scholar</a>.
+        Author name in <strong>bold</strong>.
+      </p>
+      <ol class="pubs">
+        <li>
+          <span class="pub__title">Enhancing video frame interpolation with region of motion loss and self-attention mechanisms.</span><br />
+          <span class="pub__authors">Y Kim, S Kwon, <strong>D Kang</strong>, H Lee, J Paik.</span>
+          <span class="pub__venue">Neurocomputing, 2025.</span>
+        </li>
+        <li>
+          <span class="pub__title">Structure-preserving zero-shot image editing via stage-wise latent injection in diffusion models.</span><br />
+          <span class="pub__authors">D Jeong, <strong>D Kang</strong>, J Park, H Lee, J Paik.</span>
+          <span class="pub__venue">arXiv preprint, 2025.</span>
+        </li>
+        <li>
+          <span class="pub__title">Analyzing South Korea's defense challenges with Defense Innovation 4.0 through LDA and BERT techniques.</span><br />
+          <span class="pub__authors">D Park, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">IEIE Transactions on Smart Processing &amp; Computing, 2025.</span>
+        </li>
+        <li>
+          <span class="pub__title">Cosine similarity-guided knowledge distillation for robust object detectors.</span><br />
+          <span class="pub__authors">S Park, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">Scientific Reports, 2024.</span>
+        </li>
+        <li>
+          <span class="pub__title">Real-time human group detection and clustering in crowded environments using enhanced multi-object tracking.</span><br />
+          <span class="pub__authors">H Lee, <strong>D Kang</strong>, H Park, S Park, D Jeong, J Paik.</span>
+          <span class="pub__venue">IEEE Access, 2024.</span>
+        </li>
+        <li>
+          <span class="pub__title">VLM-HOI: Vision language models for interpretable human-object interaction analysis.</span><br />
+          <span class="pub__authors"><strong>D Kang</strong>, D Jeong, H Lee, S Park, H Park, S Kwon, Y Kim, J Paik.</span>
+          <span class="pub__venue">European Conference on Computer Vision (ECCV), 2024.</span>
+        </li>
+        <li>
+          <span class="pub__title">Enhanced human–object interaction detection via maximum IoU partitioning and chunk block attention.</span><br />
+          <span class="pub__authors">H Lee, <strong>D Kang</strong>, H Park, Y Kim, S Kwon, J Paik.</span>
+          <span class="pub__venue">IEEE Access, 2024.</span>
+        </li>
+        <li>
+          <span class="pub__title">Generating diverse image variations with diffusion models by combining intra-image self-attention and decoupled cross-attention.</span><br />
+          <span class="pub__authors">D Jeong, <strong>D Kang</strong>, J Park, J Paik.</span>
+          <span class="pub__venue">IEEE Access, 2024.</span>
+        </li>
+        <li>
+          <span class="pub__title">Multiple object detection method and apparatus.</span><br />
+          <span class="pub__authors">JK Paik, SW Park, DG Kim, <strong>DG Kang</strong>.</span>
+          <span class="pub__venue">US Patent 11,816,881, 2023.</span>
+        </li>
+        <li>
+          <span class="pub__title">A review on few-shot learning for medical image segmentation.</span><br />
+          <span class="pub__authors">Y Kim, <strong>D Kang</strong>, Y Mok, S Kwon, J Paik.</span>
+          <span class="pub__venue">Int. Conf. on Electronics, Information, and Communication (ICEIC), 2023.</span>
+        </li>
+        <li>
+          <span class="pub__title">Bidirectional meta-Kronecker factored optimizer and Hausdorff distance loss for few-shot medical image segmentation.</span><br />
+          <span class="pub__authors">Y Kim, <strong>D Kang</strong>, Y Mok, S Kwon, J Paik.</span>
+          <span class="pub__venue">Scientific Reports, 2023.</span>
+        </li>
+        <li>
+          <span class="pub__title">Action recognition using multi-stream 2D CNN with deep learning-based temporal modality.</span><br />
+          <span class="pub__authors">K Kang, S Park, H Park, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">IEEE Int. Conf. on Consumer Electronics (ICCE), 2023.</span>
+        </li>
+        <li>
+          <span class="pub__title">Video quality assessment system using deep optical flow and Fourier property.</span><br />
+          <span class="pub__authors"><strong>D Kang</strong>, Y Kim, S Kwon, H Kim, J Kim, J Paik.</span>
+          <span class="pub__venue">IEEE Access, 2023.</span>
+        </li>
+        <li>
+          <span class="pub__title">Multiple-scale fire detection based on one-stage deep learning model.</span><br />
+          <span class="pub__authors">I Lee, Y Lo, <strong>D Kang</strong>, H Park, J Paik.</span>
+          <span class="pub__venue">Int. Conf. on Electronics, Information, and Communication (ICEIC), 2022.</span>
+        </li>
+        <li>
+          <span class="pub__title">Coarse to fine: Progressive and multi-task learning for salient object detection.</span><br />
+          <span class="pub__authors"><strong>D Kang</strong>, S Park, J Paik.</span>
+          <span class="pub__venue">Int. Conf. on Pattern Recognition (ICPR), 2021.</span>
+        </li>
+        <li>
+          <span class="pub__title">SdBAN: Salient object detection using bilateral attention network with dice coefficient loss.</span><br />
+          <span class="pub__authors"><strong>D Kang</strong>, S Park, J Paik.</span>
+          <span class="pub__venue">IEEE Access, 2020.</span>
+        </li>
+        <li>
+          <span class="pub__title">Real-time robust object detection using an adjacent feature fusion-based single shot multibox detector.</span><br />
+          <span class="pub__authors">D Kim, S Park, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">IEIE Transactions on Smart Processing &amp; Computing, 2020.</span>
+        </li>
+        <li>
+          <span class="pub__title">Uniformity attentive learning-based Siamese network for person re-identification.</span><br />
+          <span class="pub__authors">D Jeong, H Park, J Shin, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">Sensors, 2020.</span>
+        </li>
+        <li>
+          <span class="pub__title">Improved center and scale prediction-based pedestrian detection using convolutional block.</span><br />
+          <span class="pub__authors">D Kim, S Park, <strong>D Kang</strong>, J Paik.</span>
+          <span class="pub__venue">IEEE Int. Conf. on Consumer Electronics (ICCE-Berlin), 2019.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="foot">
+      <p>© 2026 DongGoo Kang &middot; Seoul, Korea</p>
+      <p class="foot__note">This page is maintained by <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a>.</p>
+    </footer>
+
+  </main>
+
+  <!-- ===== Photo lightbox (CSS-only) ===== -->
+  <a class="lightbox" id="photo-zoom" href="#" aria-label="Close">
+    <img src="assets/images/profile.jpg" alt="DongGoo Kang" />
+  </a>
+
+  <script src="assets/js/home-articles.js"></script>
+</body>
+</html>

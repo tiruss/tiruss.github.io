@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Article — DongGoo Kang</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <main class="page">
+    <p class="article-back"><a href="index.html">&larr; DongGoo Kang</a></p>
+
+    <article class="post">
+      <header class="post__head">
+        <h1 id="article-title">Loading…</h1>
+        <p class="post__date" id="article-date"></p>
+      </header>
+      <div class="prose" id="article-body"></div>
+    </article>
+
+    <footer class="foot">
+      <p>© 2026 DongGoo Kang &middot; Seoul, Korea</p>
+      <p class="foot__note">This page is maintained by <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude</a>.</p>
+    </footer>
+  </main>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' },
+      startup: { typeset: false }
+    };
+  </script>
+  <script src="assets/js/tex-svg.js"></script>
+  <script src="assets/js/marked.min.js"></script>
+  <script src="assets/js/article.js"></script>
+</body>
+</html>

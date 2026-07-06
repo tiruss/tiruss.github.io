@@ -1,0 +1,36 @@
+name: Build article index
+
+# Rebuilds articles/index.json whenever posts change, so the homepage list
+# updates automatically — just add articles/<slug>.md and push.
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'articles/**'
+      - 'tools/gen_articles.py'
+      - '.github/workflows/articles.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate article index
+        run: python3 tools/gen_articles.py
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain articles/index.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add articles/index.json
+            git commit -m "chore: rebuild article index [skip ci]"
+            git push
+          else
+            echo "index.json already up to date."
+          fi
